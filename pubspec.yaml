@@ -51,13 +51,8 @@ dev_dependencies:
   test: ^1.26.2
 
 topics:
-  - api-client
-  - storage
-  - validation
-  - ui-components
-  - theme
-  - utilities
-  - boilerplate-reduction
-  - productivity
   - flutter-plugin
-  - dart-package
+  - api-client
+  - ui-components
+  - storage
+  - utilities
