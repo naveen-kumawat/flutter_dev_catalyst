@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 
 class StorageDemoScreen extends StatefulWidget {
-  const StorageDemoScreen({Key? key}) : super(key: key);
+  const StorageDemoScreen({super.key});
 
   @override
   State<StorageDemoScreen> createState() => _StorageDemoScreenState();
@@ -272,12 +272,12 @@ class _StorageDemoScreenState extends State<StorageDemoScreen> {
     final value = _valueController.text.trim();
 
     if (key.isEmpty || value.isEmpty) {
-      context.showErrorSnackBar('Please enter both key and value');
+      if (mounted) context.showErrorSnackBar('Please enter both key and value');
       return;
     }
 
     await DevCatalyst.storage.saveString(key, value);
-    context.showSuccessSnackBar('Saved successfully');
+    if (mounted) context.showSuccessSnackBar('Saved successfully');
     _loadAllKeys();
     _valueController.clear();
   }

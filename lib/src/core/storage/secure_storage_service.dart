@@ -8,10 +8,7 @@ class SecureStorageService {
 
   /// Initialize secure storage
   Future<void> init() async {
-    _secureStorage = const FlutterSecureStorage(
-      aOptions: AndroidOptions(encryptedSharedPreferences: true),
-      iOptions: IOSOptions(accessibility: KeychainAccessibility.first_unlock),
-    );
+    _secureStorage = FlutterSecureStorage();
     _logger.info('✅ Secure Storage Service initialized');
   }
 

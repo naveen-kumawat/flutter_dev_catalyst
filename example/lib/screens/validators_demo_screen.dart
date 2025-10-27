@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 
 class ValidatorsDemoScreen extends StatefulWidget {
-  const ValidatorsDemoScreen({Key? key}) : super(key: key);
+  const ValidatorsDemoScreen({super.key});
 
   @override
   State<ValidatorsDemoScreen> createState() => _ValidatorsDemoScreenState();
@@ -192,7 +192,7 @@ class _ValidatorsDemoScreenState extends State<ValidatorsDemoScreen> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceVariant,
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(

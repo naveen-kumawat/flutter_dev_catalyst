@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 
 class UiComponentsScreen extends StatefulWidget {
-  const UiComponentsScreen({Key? key}) : super(key: key);
+  const UiComponentsScreen({super.key});
 
   @override
   State<UiComponentsScreen> createState() => _UiComponentsScreenState();
 }
 
 class _UiComponentsScreenState extends State<UiComponentsScreen> {
-  bool _isLoading = false;
-  bool _showError = false;
 
   @override
   Widget build(BuildContext context) {

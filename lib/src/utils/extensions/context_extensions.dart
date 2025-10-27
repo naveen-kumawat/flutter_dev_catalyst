@@ -64,7 +64,7 @@ extension ContextExtensions on BuildContext {
   Color get secondaryColor => colorScheme.secondary;
 
   /// Get background color
-  Color get backgroundColor => colorScheme.background;
+  Color get backgroundColor => colorScheme.surface;
 
   /// Get surface color
   Color get surfaceColor => colorScheme.surface;

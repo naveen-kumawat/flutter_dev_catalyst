@@ -22,7 +22,7 @@ class CatalystButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   const CatalystButton({
-    Key? key,
+    super.key,
     this.text,
     this.icon,
     required this.onPressed,
@@ -35,7 +35,7 @@ class CatalystButton extends StatelessWidget {
     this.isLoading = false,
     this.isFullWidth = false,
     this.padding,
-  }) : super(key: key);
+  });
 
   /// Elevated button constructor
   factory CatalystButton.elevated({

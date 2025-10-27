@@ -15,7 +15,7 @@ class CatalystErrorWidget extends StatelessWidget {
   final Color? color;
 
   const CatalystErrorWidget({
-    Key? key,
+    super.key,
     required this.message,
     this.title,
     this.details,
@@ -24,7 +24,7 @@ class CatalystErrorWidget extends StatelessWidget {
     this.retryButtonText,
     this.type = ErrorWidgetType.simple,
     this.color,
-  }) : super(key: key);
+  });
 
   /// Simple error widget
   factory CatalystErrorWidget.simple({
@@ -107,9 +107,9 @@ class CatalystErrorWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: errorColor.withOpacity(0.1),
+        color: errorColor.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: errorColor.withOpacity(0.3)),
+        border: Border.all(color: errorColor.withValues(alpha: 0.3)),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -262,12 +262,12 @@ class CatalystEmptyWidget extends StatelessWidget {
   final Widget? action;
 
   const CatalystEmptyWidget({
-    Key? key,
+    super.key,
     required this.message,
     this.title,
     this.icon,
     this.action,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -282,7 +282,7 @@ class CatalystEmptyWidget extends StatelessWidget {
             Icon(
               icon ?? Icons.inbox_outlined,
               size: 80,
-              color: theme.colorScheme.onSurface.withOpacity(0.3),
+              color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
             ),
             const SizedBox(height: 24),
             if (title != null) ...[
@@ -298,7 +298,7 @@ class CatalystEmptyWidget extends StatelessWidget {
             Text(
               message,
               style: theme.textTheme.bodyLarge?.copyWith(
-                color: theme.colorScheme.onSurface.withOpacity(0.7),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
               ),
               textAlign: TextAlign.center,
             ),

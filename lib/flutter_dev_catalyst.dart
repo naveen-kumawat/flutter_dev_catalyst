@@ -1,5 +1,3 @@
-library flutter_dev_catalyst;
-
 // Core API
 export 'src/core/api/api_client.dart';
 export 'src/core/api/api_config.dart';

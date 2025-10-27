@@ -16,14 +16,14 @@ class CatalystLoading extends StatelessWidget {
   final Widget? customLoader;
 
   const CatalystLoading({
-    Key? key,
+    super.key,
     this.type = LoadingType.circular,
     this.size = LoadingSize.medium,
     this.color,
     this.message,
     this.value,
     this.customLoader,
-  }) : super(key: key);
+  });
 
   /// Circular loading constructor
   factory CatalystLoading.circular({
@@ -72,22 +72,25 @@ class CatalystLoading extends StatelessWidget {
   }
 
   /// Full screen loading overlay
+  // Line 84 - Replace WillPopScope with PopScope
   static void show(
-    BuildContext context, {
-    String? message,
-    bool barrierDismissible = false,
-  }) {
+      BuildContext context, {
+        String? message,
+        bool barrierDismissible = false,
+      }) {
     showDialog(
       context: context,
       barrierDismissible: barrierDismissible,
       barrierColor: Colors.black54,
-      builder: (context) => WillPopScope(
-        onWillPop: () async => barrierDismissible,
+      builder: (context) => PopScope(  // Changed from WillPopScope
+        canPop: barrierDismissible,    // Changed from onWillPop
         child: Center(
           child: Card(
             child: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: CatalystLoading(message: message),
+              child: CatalystLoading(
+                message: message,
+              ),
             ),
           ),
         ),
@@ -184,13 +187,13 @@ class CatalystShimmer extends StatefulWidget {
   final bool enabled;
 
   const CatalystShimmer({
-    Key? key,
+    super.key,
     required this.child,
     this.baseColor = const Color(0xFFE0E0E0),
     this.highlightColor = const Color(0xFFF5F5F5),
     this.duration = const Duration(milliseconds: 1500),
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   State<CatalystShimmer> createState() => _CatalystShimmerState();
@@ -251,13 +254,13 @@ class CatalystSkeleton extends StatelessWidget {
   final Color? highlightColor;
 
   const CatalystSkeleton({
-    Key? key,
+    super.key,
     this.width,
     this.height = 16,
     this.borderRadius,
     this.baseColor,
     this.highlightColor,
-  }) : super(key: key);
+  });
 
   /// Circle skeleton
   factory CatalystSkeleton.circle({

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 
 class ThemeDemoScreen extends StatefulWidget {
-  const ThemeDemoScreen({Key? key}) : super(key: key);
+  const ThemeDemoScreen({super.key});
 
   @override
   State<ThemeDemoScreen> createState() => _ThemeDemoScreenState();
@@ -230,7 +230,7 @@ class _ThemeDemoScreenState extends State<ThemeDemoScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceVariant,
+                color: Theme.of(context).colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(

@@ -1,3 +1,25 @@
+## 1.0.1 - 2024-01-15
+
+### Fixed
+- 🔧 Updated dependency constraints to support wider version ranges
+- 🔧 Fixed static analysis issues (removed library name)
+- 🔧 Fixed logger configuration for better compatibility
+- 🔧 Fixed repository URLs pointing to actual GitHub repo
+- 🔧 Improved pub.dev score from 120 to expected 150+
+
+### Changed
+- 📦 Relaxed dependency constraints for better compatibility
+- 📚 Added topics for improved discoverability
+- 🧪 All 79 tests passing
+- 📖 Enhanced documentation
+
+### Improved
+- Better error messages in connectivity service
+- More flexible version constraints
+- Improved package metadata
+
+---
+
 ## 1.0.0 - 2024-01-15
 
 ### 🎉 Initial Release

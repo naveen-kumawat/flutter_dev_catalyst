@@ -32,7 +32,7 @@ class CatalystTextField extends StatefulWidget {
   final String? errorText;
 
   const CatalystTextField({
-    Key? key,
+    super.key,
     this.label,
     this.hint,
     this.initialValue,
@@ -57,7 +57,7 @@ class CatalystTextField extends StatefulWidget {
     this.focusNode,
     this.contentPadding,
     this.errorText,
-  }) : super(key: key);
+  });
 
   @override
   State<CatalystTextField> createState() => _CatalystTextFieldState();

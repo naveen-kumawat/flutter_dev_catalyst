@@ -23,7 +23,7 @@ void main() {
 
     test('DevCatalyst throws error when accessing API before initialization', () {
       // Create a new instance to test uninitialized state
-      final newInstance = DevCatalyst.instance;
+      // final newInstance = DevCatalyst.instance;
 
       // This should work because we initialized above, but we can test the pattern
       expect(DevCatalyst.isInitialized, true);

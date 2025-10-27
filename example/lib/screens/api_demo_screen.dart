@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 
 class ApiDemoScreen extends StatefulWidget {
-  const ApiDemoScreen({Key? key}) : super(key: key);
+  const ApiDemoScreen({super.key});
 
   @override
   State<ApiDemoScreen> createState() => _ApiDemoScreenState();

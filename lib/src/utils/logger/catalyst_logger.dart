@@ -9,21 +9,18 @@ class CatalystLogger {
   factory CatalystLogger() => _instance;
 
   CatalystLogger._internal() {
-    // Always initialize with defaults
     _initializeLogger();
   }
 
-  Logger? _loggerInstance; // Make nullable
+  Logger? _loggerInstance;
   bool _isEnabled = true;
   LogLevel _logLevel = LogLevel.debug;
 
-  // Getter that ensures logger is always available
   Logger get _logger {
     _loggerInstance ??= _createLogger();
     return _loggerInstance!;
   }
 
-  /// Create a logger instance
   Logger _createLogger() {
     return Logger(
       printer: PrettyPrinter(
@@ -32,18 +29,17 @@ class CatalystLogger {
         lineLength: 120,
         colors: true,
         printEmojis: true,
-        dateTimeFormat: DateTimeFormat.onlyTimeAndSinceStart,
+        // dateTimeFormat is only available in logger ^2.0.0
+        // Remove or use printTime for older versions
       ),
       level: _convertLogLevel(_logLevel),
     );
   }
 
-  /// Initialize logger on construction
   void _initializeLogger() {
     _loggerInstance = _createLogger();
   }
 
-  /// Initialize logger with custom settings
   void init({bool isEnabled = true, LogLevel logLevel = LogLevel.debug}) {
     _isEnabled = isEnabled;
     _logLevel = logLevel;

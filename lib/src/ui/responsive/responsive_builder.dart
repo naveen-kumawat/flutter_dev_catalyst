@@ -18,12 +18,12 @@ class ResponsiveBuilder extends StatelessWidget {
   final Widget Function(BuildContext context)? desktop;
 
   const ResponsiveBuilder({
-    Key? key,
+    super.key,
     required this.builder,
     this.mobile,
     this.tablet,
     this.desktop,
-  }) : super(key: key);
+  });
 
   /// Factory constructor for specific layouts
   factory ResponsiveBuilder.layouts({

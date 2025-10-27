@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_catalyst/flutter_dev_catalyst.dart';
 import 'api_demo_screen.dart';
 import 'storage_demo_screen.dart';
 import 'ui_components_screen.dart';
@@ -7,7 +6,7 @@ import 'validators_demo_screen.dart';
 import 'theme_demo_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
