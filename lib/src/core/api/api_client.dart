@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import '../error/exceptions.dart';
 import 'api_response.dart';
 import 'api_config.dart';
 import 'api_interceptor.dart';

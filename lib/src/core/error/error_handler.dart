@@ -112,8 +112,7 @@ class ErrorHandler {
         return const NetworkFailure(message: 'SSL certificate error');
 
       case DioExceptionType.unknown:
-      default:
-        return UnknownFailure(
+      return UnknownFailure(
           message: exception.message ?? 'An unexpected error occurred',
           details: exception,
         );
