@@ -74,23 +74,22 @@ class CatalystLoading extends StatelessWidget {
   /// Full screen loading overlay
   // Line 84 - Replace WillPopScope with PopScope
   static void show(
-      BuildContext context, {
-        String? message,
-        bool barrierDismissible = false,
-      }) {
+    BuildContext context, {
+    String? message,
+    bool barrierDismissible = false,
+  }) {
     showDialog(
       context: context,
       barrierDismissible: barrierDismissible,
       barrierColor: Colors.black54,
-      builder: (context) => PopScope(  // Changed from WillPopScope
-        canPop: barrierDismissible,    // Changed from onWillPop
+      builder: (context) => PopScope(
+        // Changed from WillPopScope
+        canPop: barrierDismissible, // Changed from onWillPop
         child: Center(
           child: Card(
             child: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: CatalystLoading(
-                message: message,
-              ),
+              child: CatalystLoading(message: message),
             ),
           ),
         ),
@@ -128,7 +127,7 @@ class CatalystLoading extends StatelessWidget {
         loader = LinearProgressIndicator(
           value: value,
           valueColor: AlwaysStoppedAnimation<Color>(loaderColor),
-          backgroundColor: loaderColor.withOpacity(0.2),
+          backgroundColor: loaderColor.withValues(alpha: 0.2),
         );
         break;
 

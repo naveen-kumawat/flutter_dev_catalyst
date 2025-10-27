@@ -9,7 +9,6 @@ class UiComponentsScreen extends StatefulWidget {
 }
 
 class _UiComponentsScreenState extends State<UiComponentsScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

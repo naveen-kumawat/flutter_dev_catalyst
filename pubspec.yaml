@@ -1,6 +1,6 @@
 name: flutter_dev_catalyst
 description: A comprehensive Flutter plugin that accelerates development with smart automation, reducing boilerplate code and development time by 60%.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/naveen-kumawat/flutter_dev_catalyst
 repository: https://github.com/naveen-kumawat/flutter_dev_catalyst
 issue_tracker: https://github.com/naveen-kumawat/flutter_dev_catalyst/issues
@@ -21,7 +21,7 @@ dependencies:
 
   # Storage
   shared_preferences: ^2.5.3
-  flutter_secure_storage: ^4.2.1
+  flutter_secure_storage: ^9.0.0
 #  hive: ^2.2.3
 #  hive_flutter: ^1.1.0
 
@@ -41,6 +41,7 @@ dependencies:
 
   # Responsive
   flutter_screenutil: ^5.9.3
+  plugin_platform_interface: ^2.1.8
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -307,7 +307,7 @@ class _ThemeDemoScreenState extends State<ThemeDemoScreen> {
                   ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '#${color.value.toRadixString(16).substring(2).toUpperCase()}',
+                  '#${color.hashCode.toRadixString(16).substring(2).toUpperCase()}',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],

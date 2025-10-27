@@ -27,7 +27,7 @@ extension ContextExtensions on BuildContext {
   double get devicePixelRatio => mediaQuery.devicePixelRatio;
 
   /// Get text scale factor
-  double get textScaleFactor => mediaQuery.textScaleFactor;
+  double get textScaleFactor => mediaQuery.textScaler.scale(1.0);
 
   /// Get padding (safe area)
   EdgeInsets get padding => mediaQuery.padding;
@@ -235,8 +235,8 @@ extension ContextExtensions on BuildContext {
     showDialog(
       context: this,
       barrierDismissible: false,
-      builder: (_) => WillPopScope(
-        onWillPop: () async => false,
+      builder: (_) => PopScope(
+        canPop: false,
         child: AlertDialog(
           content: Row(
             children: [
